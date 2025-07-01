@@ -5,3 +5,12 @@ spring:
     active: dev
   config:
     import: optional:configserver:http://admin:1234@localhost:9000
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway

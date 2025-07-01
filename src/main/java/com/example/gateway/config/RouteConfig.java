@@ -13,7 +13,8 @@ public class RouteConfig {
         return builder.routes()
                 .route("ms1", routeLocator -> routeLocator
                         .path("/ms1/**")
-                        .uri("http://localhost:8081"))
+                        // .uri("http://localhost:8081"))
+                        .uri("lb://ms1")) // Load Balancing
                 .build();
     }
 }
